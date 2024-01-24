@@ -13,11 +13,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Spacer()
                 Text("Most Recent Outfits")
                     .font(.title)
                     .fontWeight(.bold)
-                    .padding(.top)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -25,7 +23,7 @@ struct ContentView: View {
                         ForEach(0..<5) { _ in
                             Rectangle()
                                 .fill(Color.gray)
-                                .frame(width: 150, height: 150)
+                                .frame(width: 150, height: 250)
                         }
                     }
                     .padding(.horizontal)
@@ -33,7 +31,6 @@ struct ContentView: View {
                 Text("My Closet")
                     .font(.title)
                     .fontWeight(.bold)
-                    .padding(.bottom)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -41,7 +38,7 @@ struct ContentView: View {
                         ForEach(0..<5) { _ in
                             Rectangle()
                                 .fill(Color.gray)
-                                .frame(width: 150, height: 150)
+                                .frame(width: 150, height: 250)
                         }
                     }
                     .padding(.horizontal)
